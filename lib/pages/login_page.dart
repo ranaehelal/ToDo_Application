@@ -20,6 +20,8 @@ class _LoginPageState extends State<LoginPage> {
     final theme = Theme.of(context);
 
     return Scaffold(
+      resizeToAvoidBottomInset: false, // Prevent UI from shifting
+
       body: Container(
         color: theme.colorScheme.primary,
         width: double.infinity,

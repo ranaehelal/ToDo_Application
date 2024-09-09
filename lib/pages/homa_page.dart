@@ -15,9 +15,9 @@ class _HomaPageState extends State<HomaPage> {
     Task(name: "Do the exercise", isCompleted: false),
   ];
 
-  void _addNewTask() {
+  void _addNewTask(String taskName) {
     setState(() {
-      tasks.add(Task(name: "New Task ${tasks.length + 1}", isCompleted: false));
+      tasks.add(Task(name: "${taskName}", isCompleted: false));
     });
   }
 
@@ -43,14 +43,90 @@ class _HomaPageState extends State<HomaPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          _addNewTask();
+          String taskName = "";
+
+          showDialog(context: context, builder: (context){
+            return AlertDialog(
+              title: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "New Task", style: TextStyle(fontSize: 24,color: Color(0xff4f378b), fontWeight: FontWeight.w500,),),
+                  SizedBox(height: 4), // Space between title and divider
+                  Divider( // Line between title and content
+                    color: Colors.grey,
+                    thickness: 1,
+                  ),
+                ],
+              ),
+
+              content: TextField(
+                onChanged: (value) {
+                  taskName = value;
+                },
+                decoration: InputDecoration(
+                  labelText: 'Task',
+                  labelStyle: TextStyle(color: theme.colorScheme.secondary),
+                  filled: true,
+                  fillColor: Colors.white, // Background color of the TextField
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: BorderSide(
+                      color: theme.colorScheme.primary, // Border color when enabled
+                      width: 2.0,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(6.0),
+                    borderSide: BorderSide(
+                      color: theme.colorScheme.secondary, // Border color when focused
+                      width: 2.0,
+                    ),
+                  ),
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    if (taskName.isNotEmpty) {
+                      _addNewTask(taskName);
+                    }
+                    Navigator.of(context).pop(); // Close the dialog
+                  },
+                  child: Text(
+                    "OK",
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primary,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop(); },
+                  child: Text("Cancel", style: TextStyle(color: theme.colorScheme.secondary)),),
+              ],
+
+            );
+          });
+          //_addNewTask();
         },
         backgroundColor: theme.colorScheme.primary,
         child: Icon(Icons.add),
       ),
       body: Padding(
         padding: const EdgeInsets.all(25.0),
-        child: ListView.builder(
+        child: tasks.isEmpty
+            ? Center(  // If tasks is empty, display a message
+          child: Text(
+            "No tasks added",  // Message displayed when there are no tasks
+            style: TextStyle(
+              color: theme.colorScheme.secondary,
+              fontSize: 20,
+            ),
+          ),
+        ) :
+        ListView.builder(
           itemCount: tasks.length,
           itemBuilder: (BuildContext context, int index) {
             final task = tasks[index];
