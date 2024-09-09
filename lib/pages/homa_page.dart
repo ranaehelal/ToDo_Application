@@ -118,7 +118,7 @@ class _HomaPageState extends State<HomaPage> {
         padding: const EdgeInsets.all(25.0),
         child: tasks.isEmpty
             ? Center(  // If tasks is empty, display a message
-          child: Text(
+            child: Text(
             "No tasks added",  // Message displayed when there are no tasks
             style: TextStyle(
               color: theme.colorScheme.secondary,
