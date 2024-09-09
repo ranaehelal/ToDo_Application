@@ -62,7 +62,7 @@ This project is a sleek to-do application built using Flutter. It features a use
 - **Terms & Services**: Update terms content in `terms_page.dart`.
 Here's an improved version of the folder structure section for your `README.md`:
 
-```markdown
+
 ## Folder Structure
 
 ```
