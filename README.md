@@ -46,14 +46,14 @@ This project is a sleek to-do application built using Flutter. It features a use
 
 ## Screenshots
 
-<img src="project_pictures/splash.png" alt="Splash Screen" width="250" height="450">
-<img src="project_pictures/login.png" alt="Login Screen" width="250" height="450">
-<img src="project_pictures/signup.png" alt="Login Screen" width="250" height="450">
-<img src="project_pictures/terms.png" alt="Terms & Services" width="250" height="450">
-<img src="project_pictures/home_no_task.png" alt="To-Do List" width="250" height="450">
-<img src="project_pictures/home_add_task.png" alt="To-Do List" width="250" height="450">
-<img src="project_pictures/home_task_added.png" alt="To-Do List" width="250" height="450">
-<img src="project_pictures/home_delete_task.png" alt="To-Do List" width="250" height="450">
+<img src="assets/project_pictures/splash.png" alt="Splash Screen" width="250" height="450">
+<img src="assets/project_pictures/login.png" alt="Login Screen" width="250" height="450">
+<img src="assets/project_pictures/signup.png" alt="Login Screen" width="250" height="450">
+<img src="assets/project_pictures/terms.png" alt="Terms & Services" width="250" height="450">
+<img src="assets/project_pictures/home_no_task.png" alt="To-Do List" width="250" height="450">
+<img src="assets/project_pictures/home_add_task.png" alt="To-Do List" width="250" height="450">
+<img src="assets/project_pictures/home_task_added.png" alt="To-Do List" width="250" height="450">
+<img src="assets/project_pictures/home_delete_task.png" alt="To-Do List" width="250" height="450">
 
 
 ## Customization
