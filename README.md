@@ -76,12 +76,7 @@ This project is a sleek to-do application built using Flutter. It features a use
 
 ## Contact
 
-For any questions or suggestions, feel free to reach out to `your-email@example.com`.
+For any questions or suggestions, feel free to reach out to `ranaesmailhelal@gmail.com`.
 ```
 
-### Changes:
-- Adapted the project sections to match your app's structure and details.
-- Added screenshots similar to the example provided.
-- Included a "Customization" section to show how users can modify specific parts of the app.
 
-Feel free to update the links and placeholders (`your-username`, `your-email@example.com`) with your actual details!
