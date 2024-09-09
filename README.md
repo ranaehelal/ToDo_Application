@@ -1,6 +1,6 @@
 Here’s your `README.md` file based on the structure and style you provided:
 
-```markdown
+
 # Flutter To-Do App
 
 This project is a sleek to-do application built using Flutter. It features a user-friendly task management interface, splash screen, login and signup pages, and a Terms & Services section, offering a complete to-do list experience.
