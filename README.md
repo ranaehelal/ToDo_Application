@@ -1,5 +1,3 @@
-Here’s your `README.md` file based on the structure and style you provided:
-
 
 # Flutter To-Do App
 
