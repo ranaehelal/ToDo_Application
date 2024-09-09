@@ -56,27 +56,35 @@ This project is a sleek to-do application built using Flutter. It features a use
 
 ## Customization
 
-- **Themes**: Customize the light and dark themes in `theme.dart`.
+- **Themes**: Customize the light theme in `light_theme.dart`.
 - **Task List**: Modify how tasks are handled in `home_page.dart`.
 - **Authentication**: Adjust the login and signup behavior in `login_page.dart` and `signup_page.dart`.
 - **Terms & Services**: Update terms content in `terms_page.dart`.
+Here's an improved version of the folder structure section for your `README.md`:
 
+```markdown
 ## Folder Structure
 
 ```
-├── assets                 # All app assets such as images
-│   ├── btn                # Button images
-│   └── project_photos     # Project screenshots and photos
-├── lib                    # Main application code
-│   ├── screens            # UI screens (Login, Signup, Splash, Terms, Home, etc.)
-│   ├── theme.dart         # App-wide theme settings
-│   ├── main.dart          # Main entry point of the app
-└── pubspec.yaml           # Dependency file
+├── assets                    # All app assets such as images
+│   ├── btn                   # Button images
+│   └── project_photos        # Project screenshots and photos
+├── lib                       # Main application code
+│   ├── pages                 # UI screens (Login, Signup, Splash, Terms, Home, etc.)
+│   ├── theme                 # App-wide theme settings
+│   │   ├── light_theme.dart  # Light theme configuration
+│   │   └── dark_theme.dart   # Dark theme configuration
+│   ├── widgets               # Custom widgets
+│   │   └── task_item.dart    # Task item widget
+│   ├── models                # Data models
+│   │   └── task.dart         # Task model
+│   └── main.dart             # Main entry point of the app
+└── pubspec.yaml              # Dependency file
 ```
 
 ## Contact
 
 For any questions or suggestions, feel free to reach out to `ranaesmailhelal@gmail.com`.
-```
+
 
 
